@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
+import { BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import SignUp from "../auth/SignUp";
+import Login from "../auth/Login";
 
 const Nav = () => {
+  const [showSignup, setShowSignup] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <header className="bg-gray-400 shadow-md sticky top-0 z-50 h-20">
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
@@ -18,7 +24,7 @@ const Nav = () => {
 
         {/* CENTER: Nav Links */}
         <nav className="hidden md:flex items-center gap-12 text-gray-700 font-medium">
-          <Link to="/" className="hover:text-gray-500  transition">
+          <Link to="/" className="hover:text-gray-500 transition">
             Home
           </Link>
           <Link to="/factories" className="hover:text-gray-500 transition">
@@ -37,25 +43,38 @@ const Nav = () => {
             <input
               type="search"
               placeholder="Search Products"
-              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-200 text-gray-700 border border-gray-300 "
+              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-200 text-gray-700 border border-gray-300"
             />
           </div>
 
-          {/* Auth Buttons */}
-          <Link
-            to="/login"
-            className="px-4 py-2 text-gray-700 hover:text-gray-500  transition"
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
+          {/* Person Icon */}
+          <button
+            onClick={() => setShowSignup(true)}
             className="px-4 py-2 text-gray-700 rounded-full hover:text-gray-500 transition"
           >
-            Sign Up
-          </Link>
+            <BsFillPersonFill className="text-lg cursor-pointer" />
+          </button>
         </div>
 
+        {/* Modals */}
+        {showSignup && (
+          <SignUp
+            onClose={() => setShowSignup(false)}
+            openLogin={() => {
+              setShowSignup(false);
+              setShowLogin(true);
+            }}
+          />
+        )}
+        {showLogin && (
+          <Login
+            onClose={() => setShowLogin(false)}
+            openSignUp={() => {
+              setShowLogin(false);
+              setShowSignup(true);
+            }}
+          />
+        )}
       </div>
     </header>
   );

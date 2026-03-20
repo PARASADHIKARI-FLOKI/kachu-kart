@@ -12,7 +12,7 @@ const Shop = () => {
     <div className="bg-[#D9D9D973] py-10 px-4 sm:px-6 md:px-10">
       
       {/* Heading */}
-      <h1 className="text-[24px] mt-14 sm:text-3xl md:text-4xl font-semibold text-center md:text-left mb-16 md:mb-24">
+      <h1 className="text-[10px] mt-14 sm:text-3xl md:text-4xl font-semibold text-center md:text-left mb-16 md:mb-24">
         Shop By Factories
       </h1>
 
@@ -26,7 +26,7 @@ const Shop = () => {
               <img
                 src={factory.src}
                 alt={factory.alt}
-                className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-125 hover:brightness-75"
+                className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-125 hover:brightness-75  cursor-pointer"
               />
             </div>
 
