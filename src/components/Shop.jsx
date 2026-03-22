@@ -1,35 +1,68 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const Shop = () => {
+  const navigate = useNavigate();
+
   const factories = [
-    { src: "/shop/coco.png", alt: "Coco Factory" },
-    { src: "/shop/kraft.png", alt: "Kraft Factory" },
-    { src: "/shop/pepsi.png", alt: "Pepsi Factory" },
-    { src: "/shop/nestle.png", alt: "Nestle Factory" },
+    {
+      src: "/shop/coco.png",
+      name: "coco",
+      title: "Coco Factory",
+    },
+    {
+      src: "/shop/kraft.png",
+      name: "kraft",
+      title: "Kraft Factory",
+    },
+    {
+      src: "/shop/pepsi.png",
+      name: "pepsi",
+      title: "Pepsi Factory",
+    },
+    {
+      src: "/shop/nestle.png",
+      name: "nestle",
+      title: "Nestle Factory",
+    },
   ];
 
   return (
-    <div className="bg-[#D9D9D973] py-10 px-4 sm:px-6 md:px-10">
+    <div className="bg-[#f5f5f5] py-12 px-4 sm:px-8 md:px-12">
       
       {/* Heading */}
-      <h1 className="text-[10px] mt-14 sm:text-3xl md:text-4xl font-semibold text-center md:text-left mb-16 md:mb-24">
-        Shop By Factories
+    
+       <h1 className="text-3xl font-bold mb-8 text-start">
+       Shop By Factories
       </h1>
 
+
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {factories.map((factory, index) => (
-          <div key={index} className="flex justify-center items-center">
-            
-            {/* Image Card */}
-            <div className="overflow-hidden rounded-2xl w-full max-w-65 h-44 sm:h-48 md:h-52">
+          <div
+            key={index}
+            onClick={() => navigate(`/shop/${factory.name}`)}
+            className="cursor-pointer group"
+          >
+            <div className="relative overflow-hidden rounded-xl transition duration-500">
+              
+              {/* Image */}
               <img
                 src={factory.src}
-                alt={factory.alt}
-                className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-125 hover:brightness-75  cursor-pointer"
+                alt={factory.title}
+                className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
               />
-            </div>
 
+              {/* Overlay */}
+              {/* <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <p className="text-white font-semibold text-lg">
+                  {factory.title}
+                </p>
+              </div> */}
+
+            </div>
           </div>
         ))}
       </div>

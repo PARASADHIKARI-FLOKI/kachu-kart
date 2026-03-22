@@ -4,6 +4,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SignUp from "../auth/SignUp";
 import Login from "../auth/Login";
+import logo from "../../public/logo.png";
 
 const Nav = () => {
   const [showSignup, setShowSignup] = useState(false);
@@ -16,7 +17,7 @@ const Nav = () => {
         {/* LEFT: Logo */}
         <div className="flex items-center h-full">
           <img
-            src="logo.png"
+            src={logo}
             alt="Logo"
             className="h-50 w-auto object-contain mt-5"
           /> 
@@ -49,7 +50,7 @@ const Nav = () => {
 
           {/* Person Icon */}
           <button
-            onClick={() => setShowSignup(true)}
+            onClick={() => setShowLogin(true)}
             className="px-4 py-2 text-gray-700 rounded-full hover:text-gray-500 transition"
           >
             <BsFillPersonFill className="text-lg cursor-pointer" />

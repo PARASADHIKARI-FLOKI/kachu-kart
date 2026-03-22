@@ -108,8 +108,7 @@ const Login = ({ onClose, openSignUp }) => {
             <button
               onClick={openSignUp}
               className="text-blue-500 font-medium hover:underline cursor-pointer"
-            >
-              Sign Up
+            >Create an account
             </button>
           </p>
         </div>
