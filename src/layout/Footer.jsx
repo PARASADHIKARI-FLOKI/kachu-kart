@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
-import logo from "../../public/logo.png";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (

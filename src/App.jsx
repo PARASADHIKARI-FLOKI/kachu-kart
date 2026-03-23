@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './layout/Nav'
 import Home from './pages/Home'
@@ -11,8 +12,13 @@ import Shop from './components/Shop'
 import Shopdetails from './details/Shopdetails'
 import Products from './components/Products'
 import Productsdetails from './details/Productsdetails'
+import ForgetPassword from './auth/ForgetPassword'
+import VerifyCode from './auth/VerifyCode'
+import Newpassword from './auth/Newpassword'
+import AuthPopup from './auth/AuthPopup'
 
 const App = () => {
+   const [openPopup, setOpenPopup] = useState(false);
   return (
     <div >
       <Nav />
@@ -22,6 +28,9 @@ const App = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route path="/verify-code" element={<VerifyCode />} />
+        <Route path="/new-password" element={<Newpassword />} />
          <Route path="/" element={<Shop />} />
         <Route path="/shop/:name" element={<Shopdetails />} />
          <Route path="/" element={<Products />} />
@@ -29,6 +38,12 @@ const App = () => {
 
       </Routes>
        <Footer/>
+
+
+      {openPopup && (
+        <AuthPopup onClose={() => setOpenPopup(false)} />
+      )}
+
     </div>
   )
 }

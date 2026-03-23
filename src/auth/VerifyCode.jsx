@@ -1,0 +1,96 @@
+import React, { useRef } from "react";
+import { FaTimes } from "react-icons/fa";
+
+const VerifyCode = ({ goNext, onClose }) => {
+  const inputs = useRef([]);
+
+  const handleChange = (e, index) => {
+    const value = e.target.value;
+
+    if (!/^[0-9]?$/.test(value)) {
+      e.target.value = "";
+      return;
+    }
+
+    // Move to next input
+    if (value && index < 3) {
+      inputs.current[index + 1].focus();
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+   
+    if (e.key === "Backspace" && !e.target.value && index > 0) {
+      inputs.current[index - 1].focus();
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    goNext();
+  };
+
+  return (
+    <div
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="border border-gray-300 rounded-2xl p-6">
+          
+          {/* Image */}
+          <div className="flex justify-center mb-4">
+            <img
+              src="/auth/VerifyCode.jpg"
+              alt="Verify Code"
+              className="h-20 w-20 object-cover rounded-full border-2 border-gray-300 shadow"
+            />
+          </div>
+
+          {/* Close */}
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-gray-500 hover:text-black"
+          >
+            <FaTimes />
+          </button>
+
+          <h1 className="text-2xl font-bold mb-2">Verify Code</h1>
+
+          <p className="text-gray-500 text-sm mb-4">
+            Enter the 4-digit code sent to your email
+          </p>
+
+          <form onSubmit={handleSubmit}>
+            <div className="flex justify-center gap-3 mb-4">
+              {[0, 1, 2, 3].map((_, idx) => (
+                <input
+                  key={idx}
+                  maxLength="1"
+                  inputMode="numeric"   
+                  pattern="[0-9]*"    
+                  ref={(el) => (inputs.current[idx] = el)}
+                  onChange={(e) => handleChange(e, idx)}
+                  onKeyDown={(e) => handleKeyDown(e, idx)}
+                  className="w-12 h-12 border rounded-lg text-center text-lg focus:outline-blue-500"
+                />
+              ))}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+            >
+              Verify
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VerifyCode;

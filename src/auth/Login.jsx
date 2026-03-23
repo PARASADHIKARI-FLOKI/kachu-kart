@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaFacebook, FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import {Link } from "react-router-dom";
 
-const Login = ({ onClose, openSignUp }) => {
+const Login = ({ onClose, openSignUp ,openForgot}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -59,7 +60,7 @@ const Login = ({ onClose, openSignUp }) => {
               {showPassword ? (
                 <FaEye
                   onClick={() => setShowPassword(false)}
-                  className="absolute right-3 top-3 text-gray-500 cursor-pointer"
+                  className="absolute right-3 top-3 text-gray-500 cursor-pointer "
                 />
               ) : (
                 <FaEyeSlash
@@ -74,9 +75,9 @@ const Login = ({ onClose, openSignUp }) => {
                 <input type="checkbox" />
                 Remember me
               </label>
-              <h5 className="text-sm hover:text-blue-500 hover:underline cursor-pointer">
+              <span onClick={openForgot} className="text-sm hover:text-blue-500 hover:underline cursor-pointer">
                 Forget Password?
-              </h5>
+              </span>
             </div>
 
             <button className="w-full md:w-20 ml-0 md:ml-26 bg-[#d3bfbf] py-2 rounded-lg border border-gray-400 hover:bg-gray-300 cursor-pointer">
