@@ -1,48 +1,174 @@
 import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Shopdetails = () => {
   const { name } = useParams();
-  const navigate = useNavigate();
 
   const factoryDetails = {
     coco: {
       title: "Coco Factory",
-      img: "/shop/coco.png",
+      banner: "/shop/coco/cococo.png",
+      desc: "Bottlers Nepal Limited (BNL) is a public listed company in Nepal, with operations spanning over 44 years, located in the Balaju Indistrial District (BID) in Kathmandu. The plant has both Returnable Glass Bottles (RGB) and PET packaging lines, producing different products from the portfolio to serve consumers their favorite beverages at all times.",
+      sideImg: "/shop/coco/img2.png",
+      bottomImg: "/shop/coco/img3.png",
+      location:
+        "Bottlers Nepal Limited, Balaju,\nIndustrial District Balaju, \nKathmandu, Nepal",
+      established: "1979",
     },
     kraft: {
-      title: "Kraft Factory",
-      img: "/shop/kraft.png",
+      title: "Kraft Heinz Factory",
+      banner: "/shop/kraft/img.png",
+
+      desc: "The Kraft Heinz Company is one of the world's largest food and beverage manufacturers, formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. The company operates globally, producing a wide range of consumer food products including condiments, cheese, dairy, ready-to-eat meals.",
+
+      sideImg: "/shop/kraft/img2.png",
+      bottomImg: "/shop/kraft/img3.png",
+
+      location: "Chicago, Illinois, USA\nPittsburgh, Pennsylvania, USA",
+
+      established: "2015",
     },
+
     pepsi: {
-      title: "Pepsi Factory",
-      img: "/shop/pepsi.png",
-    },
-    nestle: {
-      title: "Nestle Factory",
-      img: "/shop/nestle.png",
-    },
+  title: "Pepsi Factory",
+
+  banner: "/shop/pepsi/img.jpg",
+
+  desc: "Varun Beverages Nepal is the authorized manufacturer and distributor of Pepsi products in Nepal. The company produces a wide range of beverages including Pepsi, Mountain Dew, Mirinda, 7UP, Aquafina, and Sting. With modern bottling plants and a strong distribution network, Pepsi products are widely available across Nepal.",
+
+  sideImg: "/shop/pepsi/img2.jpg",
+  bottomImg: "/shop/pepsi/img3.jpg",
+
+  location: "Pepsi-Cola, Kathmandu, Nepal\nNawalparasi, Nepal",
+
+  established: "1985 ",
+},
+nestle: {
+  title: "Nestlé",
+
+  banner: "https://fabrikbrands.com/wp-content/uploads/Brands-Owned-By-Nestle-hero-scaled.jpg",
+
+  desc: "Nestlé is one of the world's largest food and beverage companies, founded in Switzerland in 1867. In Nepal, Nestlé products such as Nescafé, Maggi, KitKat, Cerelac, and Lactogen are widely available through distributors and retail networks. The company does not operate a major manufacturing plant in Nepal but serves the market through imports and distribution channels.",
+
+  sideImg: "https://i.pinimg.com/736x/19/9d/ca/199dca07de54667b5aa94ee12baf0185.jpg",
+  bottomImg: "https://i.pinimg.com/736x/37/c5/2e/37c52e536dba34327750afcc86d2a84c.jpg",
+
+  location: "Available across Nepal (via distributors)\nNo manufacturing plant in Nepal",
+
+  established: "1867 (Global Company)",
+}
   };
 
   const productsData = {
-    coco: [
-      { id: 1, name: "Coco Powder", price: "$10", img: "/products/coco1.png" },
-      { id: 2, name: "Dark Chocolate", price: "$15", img: "/products/coco2.png" },
-    ],
-    kraft: [
-      { id: 3, name: "Kraft Cheese", price: "$8", img: "/products/kraft1.png" },
-      { id: 4, name: "Kraft Butter", price: "$12", img: "/products/kraft2.png" },
-    ],
-    pepsi: [
-      { id: 5, name: "Pepsi Can", price: "$2", img: "/products/pepsi1.png" },
-      { id: 6, name: "Pepsi Bottle", price: "$3", img: "/products/pepsi2.png" },
-    ],
-    nestle: [
-      { id: 7, name: "Nestle Milk", price: "$5", img: "/products/nestle1.png" },
-      { id: 8, name: "Nestle KitKat", price: "$2", img: "/products/nestle2.png" },
-    ],
-  };
+  coco: [
+    {
+      id: 1,
+      name: "Coco Powder",
+      price: "NPR 13641",
+      img: "/products/coco1.png",
+    },
+    {
+      id: 2,
+      name: "Dark Chocolate",
+      price: "NPR 1500",
+      img: "/products/coco2.png",
+    },
+    {
+      id: 3,
+      name: "Cocoa Butter",
+      price: "NPR 2200",
+      img: "/products/coco3.png",
+    },
+    {
+      id: 4,
+      name: "Chocolate Drink",
+      price: "NPR 500",
+      img: "/products/coco4.png",
+    },
+  ],
+
+  kraft: [
+    {
+      id: 1,
+      name: "Kraft Cheese",
+      price: "NPR 800",
+      img: "/products/kraft1.png",
+    },
+    {
+      id: 2,
+      name: "Heinz Ketchup",
+      price: "NPR 450",
+      img: "/products/kraft2.png",
+    },
+    {
+      id: 3,
+      name: "Kraft Mayonnaise",
+      price: "NPR 600",
+      img: "/products/kraft3.png",
+    },
+    {
+      id: 4,
+      name: "Mac & Cheese",
+      price: "NPR 700",
+      img: "/products/kraft4.png",
+    },
+  ],
+
+  pepsi: [
+    {
+      id: 1,
+      name: "Pepsi Bottle",
+      price: "NPR 120",
+      img: "/products/pepsi1.png",
+    },
+    {
+      id: 2,
+      name: "Mountain Dew",
+      price: "NPR 130",
+      img: "/products/pepsi2.png",
+    },
+    {
+      id: 3,
+      name: "7UP",
+      price: "NPR 120",
+      img: "/products/pepsi3.png",
+    },
+    {
+      id: 4,
+      name: "Mirinda",
+      price: "NPR 120",
+      img: "/products/pepsi4.png",
+    },
+  ],
+
+  nestle: [
+    {
+      id: 1,
+      name: "Nescafé Coffee",
+      price: "NPR 350",
+      img: "/products/nestle1.png",
+    },
+    {
+      id: 2,
+      name: "KitKat",
+      price: "NPR 60",
+      img: "/products/nestle2.png",
+    },
+    {
+      id: 3,
+      name: "Maggi Noodles",
+      price: "NPR 30",
+      img: "/products/nestle3.png",
+    },
+    {
+      id: 4,
+      name: "Cerelac",
+      price: "NPR 450",
+      img: "/products/nestle4.png",
+    },
+  ],
+};
 
   const factory = factoryDetails[name];
   const products = productsData[name];
@@ -50,57 +176,91 @@ const Shopdetails = () => {
   if (!factory) return <div className="p-10">Factory not found</div>;
 
   return (
-    <div className="p-6 md:p-12 bg-gray-100 min-h-screen">
-      
-      {/* 🔙 Back Button */}
-      <button
-        onClick={() => navigate(-1)}
-        className="mb-6 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-      >
-        ← Back
-      </button>
-
-      {/* 🏭 Factory Info */}
-      <div className="mb-10">
+    <div className="bg-gray-100 min-h-screen">
+      {/* 🔴 Banner */}
+      <div className="relative">
         <img
-          src={factory.img}
-          alt={factory.title}
-          className="w-full max-w-md rounded-xl shadow"
+          src={factory.banner}
+          alt=""
+          className="w-full h-100 object-cover"
         />
-        <h1 className="text-3xl font-bold mt-4">{factory.title}</h1>
+        <h1 className="absolute bottom-6 left-40 mb-28  text-white text-3xl font-bold">
+          {factory.title}
+        </h1>
+      </div>
+
+      {/* 🏭 Info Section */}
+      <div className="grid md:grid-cols-2 gap-8 p-6 md:p-12 bg-gray-200">
+        {/* Left Text */}
+        <div>
+          <p className="text-gray-700 text-[19px] leading-relaxed mt-40">
+            {factory.desc}
+          </p>
+
+          <img
+            src={factory.bottomImg}
+            alt=""
+            className="rounded-xl w-162 h-106 mt-50  "
+          />
+        </div>
+
+        {/* Right Images + Info */}
+        <div>
+          <img
+            src={factory.sideImg}
+            alt=""
+            className="rounded-xl w-90 h-112.5 mt-4 ml-50 "
+          />
+
+          <div className="p-4 rounded-xl mt-40 flex flex-col gap-4">
+            <p className="text-gray-700 text-sm whitespace-pre-line">
+              <strong className="text-[19px]">Location</strong> <br />
+              <span className="text-[16px]">{factory.location}</span>
+            </p>
+
+            <p className="text-gray-700 text-sm">
+              <strong className="text-[19px]">Established</strong> <br />
+              <span className="text-[16px]">{factory.established}</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* 🛍️ Products */}
-      <h2 className="text-2xl font-semibold mb-6">Products</h2>
+      <div className="p-6 md:p-12">
+        <h2 className="text-2xl font-semibold mb-6 text-center">
+          Products from this Factory
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((item) => (
-          <div
-            key={item.id}
-            className="relative bg-white rounded-xl shadow hover:shadow-xl p-4 transition duration-300"
-          >
-            {/* 📱 WhatsApp Icon */}
-            <a
-              href={`https://wa.me/9779800000000?text=I want to buy ${item.name}`}
-              target="_blank"
-              rel="noreferrer"
-              className="absolute top-50 right-3 text-green-500   p-2 rounded-full text-2xl hover:scale-110 transition bg-gray-100 hover:bg-gray-500"
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products?.map((item) => (
+            <div
+              key={item.id}
+              className="relative bg-white rounded-xl shadow hover:shadow-lg p-4 transition"
             >
-              <IoLogoWhatsapp />
-            </a>
+              {/* WhatsApp */}
+              <a
+                href={`https://wa.me/9762483563?text=I want to buy ${item.name}`}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute bottom-4 right-4 bg-green-500 text-white p-2 rounded-full text-xl hover:scale-110 transition"
+              >
+                <IoLogoWhatsapp />
+              </a>
 
-            {/* 🖼️ Product Image */}
-            <img
-              src={item.img}
-              alt={item.name}
-              className="w-full h-40 object-cover rounded-lg mb-3"
-            />
+              {/* Image */}
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-40 object-cover rounded-lg mb-3"
+              />
 
-            {/* 📦 Product Info */}
-            <h3 className="font-semibold text-lg">{item.name}</h3>
-            <p className="text-gray-500">{item.price}</p>
-          </div>
-        ))}
+              {/* Info */}
+              <h3 className="font-semibold">{item.name}</h3>
+              <p className="text-gray-500 text-sm">{item.price}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

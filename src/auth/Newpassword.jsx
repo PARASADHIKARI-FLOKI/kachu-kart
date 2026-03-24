@@ -31,18 +31,18 @@ const Newpassword = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
+        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Inner Box */}
-        <div className="border border-gray-300 rounded-2xl p-6">
+        <div className="border-2 border-gray-400 rounded-2xl p-6">
           
           {/* Image (Centered) */}
           <div className="flex justify-center mb-4">
             <img
               src="/auth/password.jpg"
               alt="New Password"
-              className="h-20 w-20 object-cover rounded-full border-2 border-gray-300 shadow"
+              className="h-20 w-20 object-cover rounded-full border-2 border-blue-300 shadow"
             />
           </div>
 
@@ -66,17 +66,17 @@ const Newpassword = ({ onClose }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 min={8}
-                className="w-full px-4 py-2 border rounded-lg pr-10"
+                className="w-full px-4 py-2 border border-gray-400 bg-gray-200 rounded-lg pr-10 focus:border-blue-300"
               />
               {showPassword ? (
                 <FaEye
                   onClick={() => setShowPassword(false)}
-                  className="absolute right-3 top-3 cursor-pointer"
+                  className="absolute right-3 top-3 text-gray-600 cursor-pointer"
                 />
               ) : (
                 <FaEyeSlash
                   onClick={() => setShowPassword(true)}
-                  className="absolute right-3 top-3 cursor-pointer"
+                  className="absolute right-3 top-3 text-gray-600 cursor-pointer"
                 />
               )}
             </div>
@@ -90,24 +90,24 @@ const Newpassword = ({ onClose }) => {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 
-                className="w-full px-4 py-2 border rounded-lg pr-10"
+                className="w-full px-4 py-2 border border-gray-400 bg-gray-200 rounded-lg pr-10 hover:border-blue-300"
               />
               {showConfirm ? (
                 <FaEye
                   onClick={() => setShowConfirm(false)}
-                  className="absolute right-3 top-3 cursor-pointer"
+                  className="absolute right-3 top-3 text-gray-600 cursor-pointer"
                 />
               ) : (
                 <FaEyeSlash
                   onClick={() => setShowConfirm(true)}
-                  className="absolute right-3 top-3 cursor-pointer"
+                  className="absolute right-3 top-3 cursor-pointer text-gray-600"
                 />
               )}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer"
             >
               Set Password
             </button>

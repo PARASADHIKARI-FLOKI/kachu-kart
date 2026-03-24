@@ -14,7 +14,7 @@ const ForgetPassword = ({ goNext, onClose }) => {
     >
       {/* Modal Box */}
       <div
-        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md relative text-center"
+        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md relative text-center"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -24,14 +24,14 @@ const ForgetPassword = ({ goNext, onClose }) => {
         >
           <FaTimes />
         </button>
-        <div className="border border-gray-400 p-4 rounded-2xl">
+        <div className="border-2 border-gray-400 p-4 rounded-2xl">
 
         {/* Image */}
         <div className="flex justify-center mb-4">
           <img
             src="/auth/password.jpg"
             alt="Forgot Password"
-            className="h-20 w-20 object-cover rounded-full border-2 border-gray-400"
+            className="h-20 w-20 object-cover rounded-full border-2 border-blue-300"
           />
         </div>
 
@@ -39,7 +39,7 @@ const ForgetPassword = ({ goNext, onClose }) => {
           Forgot Password
         </h1>
 
-        <p className="text-gray-500 text-sm mb-4">
+        <p className="text-gray-700 text-sm mb-4">
           Enter your email to receive a verification code
         </p>
 
@@ -48,12 +48,12 @@ const ForgetPassword = ({ goNext, onClose }) => {
             type="email"
             placeholder="Email"
             required
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-500 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
           />
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer"
           >
             Send Code
           </button>

@@ -51,7 +51,7 @@ const Nav = () => {
             <input
               type="search"
               placeholder="Search Products"
-              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-200 text-gray-700 border border-gray-300"
+              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-200 text-gray-700 border border-gray-300 hover:border-gray-300"
             />
           </div>
 

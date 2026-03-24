@@ -37,7 +37,7 @@ const Productsdetails = () => {
           <p className="text-gray-500 mb-4">Delivery: 5-10 Days</p>
 
           <a
-            href={`https://wa.me/9779800000000?text=I want ${product.name}`}
+            href={`https://wa.me/9762483563?text=Ic want ${product.name}`}
             className="flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-lg w-fit"
           >
             <IoLogoWhatsapp /> Inquire on WhatsApp

@@ -36,31 +36,31 @@ const VerifyCode = ({ goNext, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
+        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="border border-gray-300 rounded-2xl p-6">
+        <div className="border-2 border-gray-400 rounded-2xl p-6">
           
           {/* Image */}
           <div className="flex justify-center mb-4">
             <img
               src="/auth/VerifyCode.jpg"
               alt="Verify Code"
-              className="h-20 w-20 object-cover rounded-full border-2 border-gray-300 shadow"
+              className="h-20 w-20 object-cover rounded-full border-2 border-blue-300 shadow"
             />
           </div>
 
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-gray-500 hover:text-black"
+            className="absolute top-4 right-4 text-gray-500 hover:text-black cursor-pointer"
           >
             <FaTimes />
           </button>
 
           <h1 className="text-2xl font-bold mb-2">Verify Code</h1>
 
-          <p className="text-gray-500 text-sm mb-4">
+          <p className="text-gray-700 text-sm mb-4">
             Enter the 4-digit code sent to your email
           </p>
 
@@ -75,14 +75,14 @@ const VerifyCode = ({ goNext, onClose }) => {
                   ref={(el) => (inputs.current[idx] = el)}
                   onChange={(e) => handleChange(e, idx)}
                   onKeyDown={(e) => handleKeyDown(e, idx)}
-                  className="w-12 h-12 border rounded-lg text-center text-lg focus:outline-blue-500"
+                  className="w-12 h-12 border border-gray-400 rounded-lg text-center text-gray-700 text-lg bg-gray-200 focus:outline-blue-400"
                 />
               ))}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer"
             >
               Verify
             </button>
