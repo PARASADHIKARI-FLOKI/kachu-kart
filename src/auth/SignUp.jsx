@@ -10,7 +10,7 @@ const SignUp = ({ onClose, openLogin }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#D9D9D9] rounded-2xl flex flex-col md:flex-row w-full max-w-3xl overflow-hidden relative animate-scaleIn"
+        className="bg-white rounded-2xl flex flex-col md:flex-row w-full max-w-3xl overflow-hidden relative animate-scaleIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -45,12 +45,12 @@ const SignUp = ({ onClose, openLogin }) => {
             <input
               type="text"
               placeholder="Full Name"
-              className="w-full px-4 py-2 border-b"
+              className="w-full px-4 py-2 border-b focus:outline-none"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-2 border-b"
+              className="w-full px-4 py-2 border-b focus:outline-none"
             />
 
             {/* Password Field */}
@@ -75,7 +75,7 @@ const SignUp = ({ onClose, openLogin }) => {
               </div>
             </div>
 
-            <button className="w-full md:w-20 ml-0 md:ml-26 bg-[#d3bfbf] py-2 rounded-lg border border-gray-400 hover:bg-gray-300 cursor-pointer">
+            <button className="w-full md:w-20 ml-0 md:ml-26 bg-green-500 hover:bg-green-700 text-white py-2 rounded-lg border border-gray-400 cursor-pointer">
               Sign Up
             </button>
           </form>

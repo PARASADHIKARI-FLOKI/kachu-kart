@@ -47,11 +47,11 @@ const Nav = () => {
         <div className="flex items-center gap-4">
           {/* Search Bar */}
           <div className="hidden lg:block relative">
-            <IoIosSearch className="absolute left-3 top-2.5 text-lg text-gray-400" />
+            <IoIosSearch className="absolute left-3 top-2.5 text-lg text-gray-600" />
             <input
               type="search"
               placeholder="Search Products"
-              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-200 text-gray-700 border border-gray-300 hover:border-gray-300"
+              className="pl-10 pr-4 py-2 w-60 h-9 rounded-full bg-gray-100 text-gray-700 border border-red-400 focus:outline-none"
             />
           </div>
 

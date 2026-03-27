@@ -25,10 +25,15 @@ const VerifyCode = ({ goNext, onClose }) => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    goNext();
-  };
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  const code = inputs.current.map((input) => input.value).join("");
+  if (code.length < 4) {
+    alert("Please enter all 4 digits");
+    return;
+  }
+  goNext();
+};
 
   return (
     <div
@@ -36,7 +41,7 @@ const VerifyCode = ({ goNext, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
+        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="border-2 border-gray-400 rounded-2xl p-6">
@@ -75,7 +80,7 @@ const VerifyCode = ({ goNext, onClose }) => {
                   ref={(el) => (inputs.current[idx] = el)}
                   onChange={(e) => handleChange(e, idx)}
                   onKeyDown={(e) => handleKeyDown(e, idx)}
-                  className="w-12 h-12 border border-gray-400 rounded-lg text-center text-gray-700 text-lg bg-gray-200 focus:outline-blue-400"
+                  className="w-12 h-12 border border-gray-400 rounded-lg text-center text-gray-700 text-lg bg-gray-100 focus:outline-none"
                 />
               ))}
             </div>

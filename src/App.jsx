@@ -16,6 +16,7 @@ import ForgetPassword from './auth/ForgetPassword'
 import VerifyCode from './auth/VerifyCode'
 import Newpassword from './auth/Newpassword'
 import AuthPopup from './auth/AuthPopup'
+import Factoriedetails from './details/Factoriesdetails'
 
 const App = () => {
    const [openPopup, setOpenPopup] = useState(false);
@@ -35,6 +36,9 @@ const App = () => {
         <Route path="/shop/:name" element={<Shopdetails />} />
          <Route path="/" element={<Products />} />
         <Route path="/product/:id" element={<Productsdetails />} />
+         <Route path="/" element={<Factories />} />
+        <Route path="/factories/:name" element={<Factoriedetails />} />
+        
 
       </Routes>
        <Footer/>

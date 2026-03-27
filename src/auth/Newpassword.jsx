@@ -31,7 +31,7 @@ const Newpassword = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
+        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Inner Box */}
@@ -66,7 +66,7 @@ const Newpassword = ({ onClose }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 min={8}
-                className="w-full px-4 py-2 border border-gray-400 bg-gray-200 rounded-lg pr-10 focus:border-blue-300"
+                className="w-full px-4 py-2 border border-gray-400 bg-gray-100 rounded-lg pr-10 focus:outline-none"
               />
               {showPassword ? (
                 <FaEye
@@ -90,7 +90,7 @@ const Newpassword = ({ onClose }) => {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 
-                className="w-full px-4 py-2 border border-gray-400 bg-gray-200 rounded-lg pr-10 hover:border-blue-300"
+                className="w-full px-4 py-2 border border-gray-400 bg-gray-100 rounded-lg pr-10 focus:outline-none"
               />
               {showConfirm ? (
                 <FaEye

@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Productsdetails = () => {
@@ -40,7 +40,7 @@ const Productsdetails = () => {
             href={`https://wa.me/9762483563?text=Ic want ${product.name}`}
             className="flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-lg w-fit"
           >
-            <IoLogoWhatsapp /> Inquire on WhatsApp
+            <FaWhatsapp  /> Inquire on WhatsApp
           </a>
         </div>
       </div>
@@ -86,7 +86,7 @@ const Productsdetails = () => {
                   onClick={(e) => e.stopPropagation()}
                   className="bg-green-500 text-white p-3 rounded-full"
                 >
-                  <IoLogoWhatsapp />
+                  <FaWhatsapp  />
                 </a>
               </div>
             </div>

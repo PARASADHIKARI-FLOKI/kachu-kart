@@ -29,7 +29,7 @@ const Shop = () => {
   ];
 
   return (
-    <div className="bg-[#f5f5f5] py-12 px-4 sm:px-8 md:px-12">
+    <div className="bg-[#E1E3E4] py-12 px-4 sm:px-8 md:px-12">
       
       {/* Heading */}
     
@@ -52,7 +52,7 @@ const Shop = () => {
               <img
                 src={factory.src}
                 alt={factory.title}
-                className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+                className="w-full h-48 object-cover group-hover:scale-110 transition duration-500 hover:brightness-75"
               />
 
               {/* Overlay */}

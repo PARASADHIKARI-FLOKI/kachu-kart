@@ -1,12 +1,12 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { useParams } from "react-router-dom";
 
-const Shopdetails = () => {
+const Factoriedetails = () => {
   const { name } = useParams();
 
   const factoryDetails = {
-    coco: {
+    Coco: {
       title: "Coco Factory",
       banner: "/shop/coco/cococo.png",
       desc: "Bottlers Nepal Limited (BNL) is a public listed company in Nepal, with operations spanning over 44 years, located in the Balaju Indistrial District (BID) in Kathmandu. The plant has both Returnable Glass Bottles (RGB) and PET packaging lines, producing different products from the portfolio to serve consumers their favorite beverages at all times.",
@@ -61,7 +61,7 @@ nestle: {
   };
 
   const productsData = {
-  coco: [
+ Coco: [
     {
       id: 1,
       name: "Coco Powder",
@@ -245,7 +245,7 @@ nestle: {
                 rel="noreferrer"
                 className="absolute bottom-4 right-4 bg-green-500 text-white p-2 rounded-full text-xl hover:scale-110 transition"
               >
-                <FaWhatsapp />
+                <IoLogoWhatsapp />
               </a>
 
               {/* Image */}
@@ -266,4 +266,4 @@ nestle: {
   );
 };
 
-export default Shopdetails;
+export default Factoriedetails;

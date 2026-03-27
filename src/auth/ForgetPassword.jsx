@@ -14,7 +14,7 @@ const ForgetPassword = ({ goNext, onClose }) => {
     >
       {/* Modal Box */}
       <div
-        className="bg-[#D9D9D9] shadow-xl rounded-2xl p-8 w-full max-w-md relative text-center"
+        className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md relative text-center"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -48,7 +48,7 @@ const ForgetPassword = ({ goNext, onClose }) => {
             type="email"
             placeholder="Email"
             required
-            className="w-full px-4 py-2 border border-gray-500 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-500 text-gray-700 bg-gray-100 rounded-lg focus:outline-none"
           />
 
           <button

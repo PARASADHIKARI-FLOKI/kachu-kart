@@ -11,7 +11,7 @@ const Login = ({ onClose, openSignUp ,openForgot}) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#D9D9D9] rounded-2xl flex flex-col md:flex-row w-full max-w-3xl overflow-hidden relative animate-scaleIn"
+        className="bg-white rounded-2xl flex flex-col md:flex-row w-full max-w-3xl overflow-hidden relative animate-scaleIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -46,7 +46,7 @@ const Login = ({ onClose, openSignUp ,openForgot}) => {
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-2 border-b"
+              className="w-full px-4 py-2 border-b focus:outline-none"
               required
             />
 
@@ -54,7 +54,7 @@ const Login = ({ onClose, openSignUp ,openForgot}) => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
-                className="w-full px-4 py-2 border-b pr-10"
+                className="w-full px-4 py-2 border-b pr-10 focus:outline-none"
                 required
               />
               {showPassword ? (
@@ -80,7 +80,7 @@ const Login = ({ onClose, openSignUp ,openForgot}) => {
               </span>
             </div>
 
-            <button className="w-full md:w-20 ml-0 md:ml-26 bg-[#d3bfbf] py-2 rounded-lg border border-gray-400 hover:bg-gray-300 cursor-pointer">
+            <button className="w-full md:w-20 ml-0 md:ml-26 bg-green-500 hover:bg-green-700 text-white py-2 rounded-lg border border-gray-400 cursor-pointer">
               Login
             </button>
           </form>

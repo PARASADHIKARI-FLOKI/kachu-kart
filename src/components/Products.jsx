@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
@@ -83,20 +83,20 @@ const Products = () => {
           <div
             key={item.id}
             onClick={() => navigate(`/product/${item.id}`, { state: item })}
-            className="bg-[#DBDEE4] rounded-2xl overflow-hidden group cursor-pointer"
+            className="bg-[#DBDEE4] rounded-2xl overflow-hidden group  shadow-[4px_4px_10px_rgba(0,0,0,0.2)]"
           >
             <div className="overflow-hidden">
               <img
                 src={item.img}
                 alt={item.name}
-                className="w-full h-70 object-cover transform group-hover:scale-110 transition duration-500"
+                className="w-full h-70 object-cover cursor-pointer transform group-hover:scale-110 transition duration-500"
               />
             </div>
 
-            <div className="bg-gray-200 p-4 flex justify-between items-center">
+            <div className="bg-white p-4 flex justify-between items-center">
               <div>
+                <p className="text-sm text-gray-500">{item.brand}</p>
                 <h3>{item.name}</h3>
-                <p className="text-sm text-gray-500">By {item.brand}</p>
                 <p className="font-bold">{item.price}</p>
               </div>
 
@@ -105,7 +105,7 @@ const Products = () => {
                 onClick={(e) => e.stopPropagation()}
                 className="bg-green-500 text-white p-3 rounded-full"
               >
-                <IoLogoWhatsapp />
+                <FaWhatsapp />
               </a>
             </div>
           </div>
