@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaFacebook, FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
-import {Link } from "react-router-dom";
+// import {Link } from "react-router-dom";
+// import logo from "../assets/logo.png"
 
 const Login = ({ onClose, openSignUp ,openForgot}) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,11 +24,11 @@ const Login = ({ onClose, openSignUp ,openForgot}) => {
         </button>
 
         {/* Logo */}
-        <img
-          src="logo.png"
+        {/* <img
+          src={logo}
           alt="Logo"
           className="absolute -top-5 -left-5 w-50 z-50"
-        />
+        /> */}
 
         {/* Left Image (hidden on mobile) */}
         <div className="hidden md:flex w-1/2 items-center justify-center">

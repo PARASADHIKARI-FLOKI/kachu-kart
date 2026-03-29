@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="bg-[#eef2f4] min-h-155 flex items-center">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 px-4 sm:px-6">
         {/* Text Section */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center lg:text-left mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mr-20 text-gray-800">
             Wholesale & Bulk Orders Made Simple
           </h1>
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 flex justify-center lg:justify-end">
+        <div className="flex-1 flex justify-center lg:justify-end -mt-20">
           <img
             src="home/img1.jpg"
             alt="Wholesale"
